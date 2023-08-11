@@ -142,7 +142,8 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = [
     # Add the URLs of your Next.js app here to allow CORS requests from them
     'http://127.0.0.1:3000',
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'http://3.136.223.172:8000'
 ]
 
 
