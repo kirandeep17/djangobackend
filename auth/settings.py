@@ -145,7 +145,7 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://3.136.223.172:8000'
 ]
-
+ALLOWED_HOSTS = ['*']
 
 
 # Default primary key field type
