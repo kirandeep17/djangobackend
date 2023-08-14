@@ -1,7 +1,7 @@
 from django.urls import path
 from unicodedata import UCD
 
-from .views import RegisterView,UserUpdateAPIView,TutorialAPIView,UserProfileView,BlogPostUpdatedView,ArticleAPIView,BlogPostView,blog_list,searchblog,category_list,userblogView
+from .views import RegisterView,UserUpdateAPIView,TutorialAPIView,deleteblogAPIView,UserProfileView,BlogPostUpdatedView,ArticleAPIView,BlogPostView,blog_list,searchblog,category_list,userblogView
 from .views import LoginView,UserView,LogoutView,CampaignListAPIView,CampaignDetailsAPIView,SubscriberToCampaignAPIView,IndexAPIView
 
 urlpatterns = [
@@ -32,6 +32,8 @@ urlpatterns = [
     path('article/<int:id>', ArticleAPIView, name='article'),
     path('categorylist', category_list, name='category'),
     path('blogPostUpdate', BlogPostUpdatedView.as_view()),
+
+    path('delete/<int:id>', deleteblogAPIView, name='article'),
     
     
 ]

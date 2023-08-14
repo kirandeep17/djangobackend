@@ -285,3 +285,10 @@ class BlogPostUpdatedView(APIView):
         serializer.is_valid(raise_exception=True)
         serializer.save() 
         return Response(serializer.data)
+    
+
+@api_view(['GET'])
+def deleteblogAPIView(request, id):
+    data = get_object_or_404(Tutorials, id=id)
+    data.delete()    
+    return JsonResponse({'success': True})
